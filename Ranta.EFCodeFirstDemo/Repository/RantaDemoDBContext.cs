@@ -10,8 +10,19 @@ namespace Ranta.EFCodeFirstDemo.Repository
 {
     public class RantaDemoDBContext : DbContext
     {
-        public RantaDemoDBContext() : base("RantaDemoDB")
+        /// <summary>
+        /// 测试一：放Name
+        /// </summary>
+        //public RantaDemoDBContext() : base("RantaDemoDB")
+        //{
+        //}
+
+        /// <summary>
+        /// 测试二：放ConnString
+        /// </summary>
+        public RantaDemoDBContext() : base(@"Data Source=BLUEWIND\BLUESERVER;Initial Catalog=RantaDemoDB;Integrated Security=True")
         {
+
         }
 
         public DbSet<Student> Students { get; set; }
